@@ -5,6 +5,7 @@ import com.rabbitmq.client.Connection;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.concurrent.TimeoutException;
 
 public class Send {
@@ -26,7 +27,7 @@ public class Send {
         int m = 1;
         //消息内容
         for (int i = 0; i < 50; i++) {
-            String message = "Hello World" + m;
+            String message = new Date()+"Hello World" + m;
             channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
             m++;
 

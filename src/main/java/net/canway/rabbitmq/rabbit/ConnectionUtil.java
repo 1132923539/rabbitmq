@@ -11,7 +11,9 @@ public class ConnectionUtil {
     public static Connection getConnet() {
         ConnectionFactory factory = new ConnectionFactory();
 
-        factory.setHost("192.168.229.129");
+//        factory.setHost("192.168.229.129");
+        factory.setHost("66.42.63.144");
+        factory.setConnectionTimeout(5000);
 
         factory.setPort(5672);
 
