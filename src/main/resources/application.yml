@@ -9,6 +9,4 @@ spring:
     username: user
     password: 123
     virtual-host: myhost
-    connection-timeout: 5s
-    template:
-      exchange: springboot
+    connection-timeout: 10s

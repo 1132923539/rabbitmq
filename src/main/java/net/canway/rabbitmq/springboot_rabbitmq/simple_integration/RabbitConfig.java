@@ -12,4 +12,5 @@ public class RabbitConfig {
         return new Queue("simple-springboot-rabbit");
     }
 
+
 }
