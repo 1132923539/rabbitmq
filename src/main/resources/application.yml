@@ -1,0 +1,14 @@
+server:
+  port: 6666
+
+
+spring:
+  rabbitmq:
+    host: 66.42.63.144
+    port: 5672
+    username: user
+    password: 123
+    virtual-host: myhost
+    connection-timeout: 5s
+    template:
+      exchange: springboot
