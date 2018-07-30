@@ -16,10 +16,12 @@ public class Sender_springboot {
     public void send() {
         for (int i = 0; i < 50; i++) {
 
-            String context = "hello rabbitmq intagrat springboot--: "+i + new Date().toLocaleString();
-            this.rabbitTemplate.convertAndSend("hello", context);
-            System.out.println("消息："+i+"----------------- 发送成功---------");
+            String context = new Date().toLocaleString() + "  hello rabbitmq intagrat springboot--: " + i;
+
+            //这里需要制定路由名称
+            this.rabbitTemplate.convertAndSend("simple-springboot-rabbit", context);
         }
+        System.out.println("消息：----------------- 发送成功---------");
     }
 
 }

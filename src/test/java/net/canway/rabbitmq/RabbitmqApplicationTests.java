@@ -1,6 +1,6 @@
 package net.canway.rabbitmq;
 
-import net.canway.rabbitmq.rabbit.Consumer;
+import net.canway.rabbitmq.springboot_rabbitmq.advanced_integration.TopicSender;
 import net.canway.rabbitmq.springboot_rabbitmq.simple_integration.Consumer_springboot;
 import net.canway.rabbitmq.springboot_rabbitmq.simple_integration.Sender_springboot;
 import org.junit.Test;
@@ -29,4 +29,13 @@ public class RabbitmqApplicationTests {
 
     }
 
+    @Autowired
+    private TopicSender topicSender;
+
+    @Test
+    public void topicTest() {
+        topicSender.send_one();
+        System.out.println("----------------------这是分割线--------------");
+        topicSender.send_two();
+    }
 }

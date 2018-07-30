@@ -11,7 +11,7 @@ public class Consumer_springboot {
 
 
     @RabbitHandler
-    public void process(Object hello) {
+    public void process(String hello) {
         System.out.println("Receiver  : " + hello);
     }
 }
