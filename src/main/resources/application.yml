@@ -4,9 +4,16 @@ server:
 
 spring:
   rabbitmq:
-    host: 66.42.63.144
+    host: 192.168.170.128
     port: 5672
-    username: user
-    password: 123
-    virtual-host: myhost
+    username: soda
+    password: soda
+    virtual-host: soda4
     connection-timeout: 10s
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 5
+        max-concurrency: 20
+        retry:
+          enabled: false
